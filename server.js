@@ -60,12 +60,20 @@ app.get('/about', (request, response) =>{
 		});
 });
 
+app.get('/project', (req,res) =>{
+	res.render('project.hbs',{
+		pageTitle: "Project page"
+	});
+});
+
 app.get('/bad', (req, res)=>{
 	res.send({
 		errorMessage:'Unable trace your request'
 	});
 
 });
+
+
 
 //listen is bind an application to the port on our mechine (local port -3000)
 app.listen(port,() =>{
